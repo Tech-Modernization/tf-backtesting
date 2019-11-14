@@ -3,5 +3,5 @@ provider "aws" {
 }
 
 module "dev_aws-virginia_backtesting" {
-  source = "./config"
+  source = "./temp"
 }
