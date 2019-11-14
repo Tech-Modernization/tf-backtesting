@@ -13,9 +13,11 @@ echo -e "Generating temporary config directory for ${TARGET_ENV} ....\n"
 
 mkdir temp
 
-echo -e "Copying ${TARGET_ENV}'s config file into temporary directory ....\n"
+echo -e "Copying ${TARGET_ENV}'s config and vars file into temporary directory ....\n"
 
 cp config/tf_env_backtesting_${TARGET_ENV}.tf temp/
+
+ls temp
 
 echo -e "\n"
 
@@ -34,6 +36,8 @@ EOF
 cat ./backend.tf
 
 echo -e "\n\n"
+
+terraform get
 
 terraform init -reconfigure
 
